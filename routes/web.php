@@ -18,4 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('form', reservationController::class);
+Route::resource('form', ReservationController::class);

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Reservation Form</title>
+        <title>Edit Form Data</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -15,8 +15,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </head>
     <body class="antialiased">
-        <h1> Reservation Form</h1>
-        <form action="{{ route('form.store') }}" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-3">
+        <h1> Edit Reservation Form</h1>
+        <form action="{{ route('form.update') }}" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-3">
             @csrf
             <input type="text" name="name" placeholder="Name" required/>
             <input type="text" name="phone_number" placeholder="Phone" required/>
@@ -25,7 +25,7 @@
             <input type="time" name="time" placeholder="Time" required/>
             <input type="number" name="guests" placeholder="Guests" required/>
             <textarea type="message" name="message" placeholder="Message"></textarea>
-            <button type="submit">Submit</button>
+            <button type="submit">Save Changes</button>
         </form>
     </body>
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\reservation;
 use Illuminate\Http\Request;
+use App\Jobs\SendReservationConfirmationEmail;
 
 class ReservationController extends Controller
 {
@@ -37,6 +38,7 @@ class ReservationController extends Controller
         $reservation->guests = $request->guests;
         $reservation->message = $request->message;
         $reservation->save();
+        SendReservationConfirmationEmail::dispatch($reservation);
         return redirect()->route('form.index')->with('success', 'Reservation has been made successfully!');
     }
 
@@ -61,7 +63,15 @@ class ReservationController extends Controller
      */
     public function update(Request $request, reservation $reservation)
     {
-        //
+        $reservation->name = $request->name;
+        $reservation->email = $request->email;
+        $reservation->phone_number = $request->phone_number;
+        $reservation->date = $request->date;
+        $reservation->time = $request->time;
+        $reservation->guests = $request->guests;
+        $reservation->message = $request->message;
+        $reservation->save();
+        return redirect()->route('index')->with('success', 'Reservation has been updated successfully!');
     }
 
     /**
@@ -70,6 +80,6 @@ class ReservationController extends Controller
     public function destroy(reservation $reservation)
     {
         $reservation->delete();
-        return redirect()->route('index');
+        return redirect()->route('form.index');
     }
 }

@@ -34,6 +34,7 @@
                     <th>Time</th>
                     <th>Guests</th>
                     <th>Message</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -47,6 +48,14 @@
                     <td>{{ $reservation->time }}</td>
                     <td>{{ $reservation->guests }}</td>
                     <td>{{ $reservation->message }}</td>
+                    <td>
+                            
+                        <form action="{{ route('form.destroy', $reservation->id) }}" method="POST" style="display: inline-block;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
