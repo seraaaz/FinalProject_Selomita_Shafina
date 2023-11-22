@@ -16,6 +16,21 @@
     </head>
     <body class="antialiased">
         <h1> Reservation Form</h1>
+
+        @if (isset($reservation))
+        <form action="{{ route('form.update', ['form' => $reservation->id]) }}"  enctype="multipart/form-data" method="POST" class="d-flex flex-column gap-3">
+            @method('PUT')
+            @csrf
+            <input type="text" name="name" placeholder="Name" value="{{$reservation->name}}" required/>
+            <input type="text" name="phone_number" placeholder="Phone" value="{{$reservation->phone_number}}" required/>
+            <input type="email" name="email" placeholder="Email" value="{{$reservation->email}}"required/>
+            <input type="date" name="date" placeholder="Date" value="{{$reservation->date}}"required/>
+            <input type="time" name="time" placeholder="Time" value="{{$reservation->time}}"required/>
+            <input type="number" name="guests" placeholder="Guests" value="{{$reservation->guests}}"required/>
+            <textarea type="message" name="message" placeholder="Message" value="{{$reservation->message}}"></textarea>
+            <button type="submit">Save</button>
+        </form> 
+        @else
         <form action="{{ route('form.store') }}" method="post" enctype="multipart/form-data" class="d-flex flex-column gap-3">
             @csrf
             <input type="text" name="name" placeholder="Name" required/>
@@ -27,5 +42,6 @@
             <textarea type="message" name="message" placeholder="Message"></textarea>
             <button type="submit">Submit</button>
         </form>
+        @endif
     </body>
 </html>

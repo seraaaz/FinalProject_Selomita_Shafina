@@ -49,12 +49,18 @@
                     <td>{{ $reservation->guests }}</td>
                     <td>{{ $reservation->message }}</td>
                     <td>
-                            
-                        <form action="{{ route('form.destroy', $reservation->id) }}" method="POST" style="display: inline-block;">
+                        <form action="{{ route('form.edit', $reservation->id) }}">
+                            @method('PUT')
                             @csrf
+                            <button type="submit" class="btn btn-warning">Edit</button>
+                        </form>
+
+                        <form action="{{ route('form.destroy', $reservation->id) }}" method="POST" style="display: inline-block;">
                             @method('DELETE')
+                            @csrf
                             <button type="submit" class="btn btn-danger">Delete</button>
                         </form>
+                
                     </td>
                 </tr>
                 @endforeach
