@@ -30,7 +30,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="resources/img/favicon.ico" rel="icon">
+    <link href="/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,7 +66,7 @@
 
 
         <!-- Navbar & Hero Start -->
-        <div class="container-xxl position-relative p-0">
+        <div class=" position-relative p-0">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     <h1 class="text-primary m-0"><i class="fa fa-utensils me-3"></i>Tasty Trails</h1>
@@ -87,7 +87,7 @@
                 </div>
             </nav>
 
-            <div class="container-xxl py-5 bg-dark hero-header mb-5">
+            <div class=" py-5 bg-dark hero-header mb-5">
                 <div class="container my-5 py-5">
                     <div class="row align-items-center g-5">
                         <div class="col-lg-6 text-center text-lg-start">
@@ -96,7 +96,7 @@
                             <a href="{{ route('form.create') }}" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Book A Table</a>
                         </div>
                         <div class="col-lg-6 text-center text-lg-end overflow-hidden">
-                            <img class="img-fluid" src="resources/img/hero.png" alt="">
+                            <img class="img-fluid" src="/img/hero.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
 
 
         <!-- Service Start -->
-        <div class="container-xxl py-5">
+        <div class=" py-5">
             <div class="container">
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -152,22 +152,22 @@
 
 
         <!-- About Start -->
-        <div class="container-xxl py-5">
+        <div class=" py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="resources/img/about-1.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s" src="/img/about-1.jpg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="resources/img/about-2.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.3s" src="/img/about-2.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="resources/img/about-3.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.5s" src="/img/about-3.jpg">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="resources/img/about-4.jpg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.7s" src="/img/about-4.jpg">
                             </div>
                         </div>
                     </div>
@@ -204,7 +204,7 @@
         <!-- About End -->
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class=" py-5 wow fadeInUp" data-wow-delay="0.1s">
             <div class="container">
                 <div class="text-center">
                     <h5 class="section-title ff-secondary text-center text-primary fw-normal">Testimonial</h5>
@@ -215,7 +215,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="resources/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/img/testimonial-1.jpg" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h5 class="mb-1">Client Name</h5>
                                 <small>Profession</small>
@@ -226,7 +226,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="resources/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/img/testimonial-2.jpg" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h5 class="mb-1">Client Name</h5>
                                 <small>Profession</small>
@@ -237,7 +237,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="resources/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/img/testimonial-3.jpg" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h5 class="mb-1">Client Name</h5>
                                 <small>Profession</small>
@@ -248,7 +248,7 @@
                         <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
                         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="resources/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
+                            <img class="img-fluid flex-shrink-0 rounded-circle" src="/img/testimonial-4.jpg" style="width: 50px; height: 50px;">
                             <div class="ps-3">
                                 <h5 class="mb-1">Client Name</h5>
                                 <small>Profession</small>

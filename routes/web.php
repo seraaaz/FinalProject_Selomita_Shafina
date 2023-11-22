@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::resource('form', ReservationController::class);
+
+Route::get('/dashboard', [ReservationController::class, 'index']);
