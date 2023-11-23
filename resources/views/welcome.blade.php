@@ -56,10 +56,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="" class="nav-item nav-link">About</a>
                         <a href="" class="nav-item nav-link">Menu</a>
                         <a href="" class="nav-item nav-link">Contact</a>
+                        <a href="index.html" class="nav-item nav-link active">Login</a>
                     </div>
                     <a href="{{ route('form.create') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
                 </div>
@@ -218,7 +219,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="">Home</a>
+                                <a href="">Dashboard</a>
                                 <a href="">Cookies</a>
                                 <a href="">Help</a>
                                 <a href="">FQAs</a>
