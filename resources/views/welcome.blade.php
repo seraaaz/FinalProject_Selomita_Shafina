@@ -60,7 +60,7 @@
                         <a href="" class="nav-item nav-link">About</a>
                         <a href="" class="nav-item nav-link">Menu</a>
                         <a href="" class="nav-item nav-link">Contact</a>
-                        <a href="index.html" class="nav-item nav-link active">Login</a>
+                        <a href="{{ route('login') }}" class="nav-item nav-link active">Login</a>
                     </div>
                     <a href="{{ route('form.create') }}" class="btn btn-primary py-2 px-4">Book A Table</a>
                 </div>
