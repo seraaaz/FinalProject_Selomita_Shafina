@@ -39,7 +39,7 @@ class ReservationController extends Controller
         $reservation->message = $request->message;
         $reservation->save();
         SendReservationConfirmationEmail::dispatch($reservation);
-        return redirect()->route('form.index')->with('success', 'Reservation has been made successfully!');
+        return redirect()->route('welcome')->with('success', 'Reservation has been made successfully!');
     }
 
     /**

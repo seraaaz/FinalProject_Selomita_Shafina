@@ -12,8 +12,8 @@ class MenuController extends Controller
      */
     public function index()
     {
-        dd(menu::all());
-        return view('menu', ['menus' => menu::all()]);
+        // dd(menu::all());
+        return view('menuindex', ['menus' => menu::all()]);
     }
 
     /**
@@ -21,7 +21,7 @@ class MenuController extends Controller
      */
     public function create()
     {
-        return view('dashboard');
+        return view('menuform');
     }
 
     /**
@@ -45,7 +45,7 @@ class MenuController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(menu $menu)
+    public function show(menu $menuform)
     {
         //
     }
@@ -53,24 +53,39 @@ class MenuController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(menu $menu)
+    public function edit(menu $menuform)
     {
-        //
+        $menu = $menuform;
+        return view('menuform', ['menu' => $menuform]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, menu $menu)
+    public function update(Request $request, menu $menuform)
     {
-        //
+        $menu = $menuform;
+        $menu->name = $request->name;
+        $menu->price = $request->price;
+        $menu->description = $request->description;
+
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $imageName = time().'.'.$image->extension();
+            $image->move(public_path('images'), $imageName);
+            $menu->image = $imageName;
+        }
+        $menu->save();
+        return redirect()->route('menus.index')->with('success', 'Menu has been updated successfully!');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(menu $menu)
+    public function destroy(menu $menuform)
     {
-        //
+        $menu = $menuform;
+        $menu->delete();
+        return redirect()->route('menus.index')->with('success', 'Menu has been deleted successfully!');
     }
 }

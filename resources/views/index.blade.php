@@ -22,7 +22,7 @@
         </div>
     @endif
     
-    <a href="{{ route('form.create') }}" class="btn btn-primary">Add Reservation</a>
+    <a href="{{ route('dashboard') }}" class="btn btn-primary">Dashboard</a>
         <table class="table">
             <thead>
                 <tr>
