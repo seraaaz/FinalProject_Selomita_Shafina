@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\menu;
+use App\Models\menuOrder;
 use App\Models\order;
 use Illuminate\Http\Request;
 
@@ -20,7 +22,8 @@ class OrderController extends Controller
      */
     public function create()
     {
-        //
+        $menus = menu::all();
+        return view('orderform', ['menus' => $menus]);
     }
 
     /**
@@ -28,7 +31,12 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $order = new menuOrder();
+        $order->menu_id = $request->menu_id;
+        $order->quantity = $request->quantity;
+        $order->save();
+
+        return redirect()->route('dashboard')->with('success', 'Order has been placed successfully!');
     }
 
     /**

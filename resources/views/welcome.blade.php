@@ -58,8 +58,8 @@
                     <div class="navbar-nav ms-auto py-0 pe-4">
                         <a href="{{route("welcome")}}" class="nav-item nav-link">Home</a>
                         <a href="" class="nav-item nav-link">About</a>
-                        <a href="{{route("menu")}}" class="nav-item nav-link">Menu</a>
-                        <a href="" class="nav-item nav-link">Order</a>
+                        <a href="{{route("menus.index")}}" class="nav-item nav-link">Menu</a>
+                        <a href="{{route("orders.create")}}" class="nav-item nav-link">Order</a>
                         <a href="{{ route('login') }}" class="nav-item nav-link active">Login</a>
                     </div>
                     <a href="{{ route('form.create') }}" class="btn btn-primary py-2 px-4">Book A Table</a>

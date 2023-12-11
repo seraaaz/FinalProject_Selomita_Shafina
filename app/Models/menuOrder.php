@@ -11,7 +11,12 @@ class menuOrder extends Model
 
     protected $fillable = [
         'menu_id',
-        'order_id',
+        // 'order_id',
         'quantity',
     ];
+
+    public function menu()
+    {
+        return $this->belongsTo(menu::class);
+    }
 }

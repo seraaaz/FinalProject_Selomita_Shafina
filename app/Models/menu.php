@@ -16,4 +16,9 @@ class menu extends Model
         'image',
     ];
 
+    public function orders()
+    {
+        return $this->hasMany(menuOrder::class);
+    }
+
 }
