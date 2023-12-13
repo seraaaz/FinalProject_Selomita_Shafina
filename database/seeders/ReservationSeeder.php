@@ -17,7 +17,7 @@ class ReservationSeeder extends Seeder
             'name' => 'John Doe',
             'phone_number' => '123456789',
             'email' => 'john@gmail.com',
-            'date' => '2021-01-01',
+            'date' => '2023-12-12',
             'time' => '12:00',
             'guests' => '2',
             'message' => 'Hello, I would like to reserve a table for two.',

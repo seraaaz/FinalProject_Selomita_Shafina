@@ -50,7 +50,8 @@
                         <a href="{{route("dashboard")}}" class="nav-item nav-link">Home</a>
                         <a href="{{ route('form.index') }}" class="nav-item nav-link">Reservation Data</a>
                         <a href="{{route("menus.create")}}" class="nav-item nav-link">Add Menu</a>
-                        <a href="{{ route('menus.index') }}" class="nav-item nav-link active">Menu</a>
+                        <a href="{{ route('menus.index') }}" class="nav-item nav-link">Menu</a>
+                        <a href="{{ route('profile.destroy') }}" class="nav-item nav-link active">Logout</a>
                     </div>
                 </div>
             </nav>
